@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+
 /**
  * Use this file to import partials.
  * Do not include SCSS code in this file.
@@ -6,7 +9,23 @@
 /**
  * Import variables
  */
-
+ @layer components{
+    .blockquote{
+        @apply text-lg italic font-medium text-gray-600;
+    }
+    .texto{ 
+        @apply text-base/7 text-white indent-1 mx-6 md:text-justify;
+        
+      }
+      .h6{
+        @apply text-lg/8 italic text-zinc-600;
+      }
+      .link{
+        @apply text-base text-white hover:text-amber-800 hover:italic;
+      }
+    }
+  
+@import "npm:@fortawesome/fontawesome-free/css/all.css";
 @import "variables";
 
 /**
@@ -24,7 +43,12 @@
  */
 
 @import "layouts/home";
+@import "layouts/chess";
+@import "layouts/header";
 
 /**
  * Do NOT include anything else in this file!
  */
+
+ @tailwind utilities;
+
